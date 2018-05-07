@@ -1,4 +1,4 @@
-# ENGVIRE 
+# ENGVIRE 6Nations Rugby 2018 Final 
 # Time slots
 # pre 9.45pm (NZT 3.17 Sat) - 3.45am (GMT 8.45am - 2.45pm 3.17 Sat)
 # mid 3.45am (NZT 3.18 Sun) - 6.15am (GMT 2.45pm - 5.15pm 3.17 Sat)
@@ -10,10 +10,10 @@ from tweepy import OAuthHandler
 
 s = sched.scheduler(time.time, time.sleep)
 
-consumer_key = 'LHtKpoOY9kTRUSlkEHIMP2Ush'
-consumer_secret = 'cCcizrmHOE9yLEY8QOhsMk4Sl4TfS4WVPcswuvAIOxWG3lBbY4'
-access_token = '1630534146-pP53l5q5yNfdWjM1cSwtaclVFKJ6QoYjnz2f2iE'
-access_secret = 'SY3n6vF2wMF2UqMju7GdsMH35zewXMkJyhV9JrVOhhPJH'
+consumer_key = ''
+consumer_secret = ''
+access_token = ''
+access_secret = ''
 
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_secret)
@@ -29,7 +29,7 @@ class MyListener(StreamListener):
     def on_data(self, data):
         try:
             print(data)
-            saveFile = open('atirish2.json','a')
+            saveFile = open('atirish.json','a')
             saveFile.write(data)
             saveFile.write('\n')
             saveFile.close()
